@@ -1,1 +1,356 @@
-
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>soundbeat3d1.github.io</title>
+        <style>
+            button {
+                padding: 15px 32px;
+                font-size: 16px;
+            }
+            button:hover {
+                cursor: url('https://www.cursor.cc/cursor/498/157/cursor.png') 17 13, pointer;
+            }
+            .social {
+                padding: 10px 25px;
+                font-size: 16px;
+            }
+            .x {
+                padding: 5px 5px;
+                font-size: 12px;
+            }
+            html {
+                cursor: url('https://www.cursor.cc/cursor/498/157/cursor.png') 17 13, auto;
+            }
+            .wirusy {
+                background-color: red;
+                color: black;
+            }
+            .wirusy1 {
+                background-color: black;
+                color: red;
+            }
+            .credits {
+                background-color: black;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>soundbeat3d1.github.io</h1>
+        <h2>moja osrana (dobra) strona [BEZ REKLAM]</h2>
+        <h3>tu są różne rzeczy xd, klik klik</h3>
+        <button onclick="ciemny();">Tryb Ciemny</button>
+        <button onclick="jasny();">Tryb Jasny</button><br><hr> <!--style="width: 100%;"-->
+        <center>
+            <button onclick="window.open('https://scratch.mit.edu/projects/663927720/embed')">Jaki jest mój OS? (OS Detector)</button>
+            <button onclick="minecraft();">Minecraft Emulator</button>
+            <button onclick="update();">Fake Update Emulator</button>
+            <button onclick="emulator();">Windows Emulator</button>
+            <button onclick="bsod();">BSOD Emulator</button>
+            <button onclick="gry();">Gry</button>
+            <button onclick="programy();">Programy</button>
+            <button onclick="window.open('https://www.youtube.com/playlist?list=PL61a0i9NMQn7LYfacBQ0Q-oWUcJ3J8UhR')">Kolbaser Project Muzy</button>
+            <button onclick="alert('clash royale, brawl stars, minecraft, among us, roblox, room smash + rycze project nie pozwala mi cheaty do gier')">polecane gry na android</button>
+            <button onclick="socialmedia();">moje social medie</button>
+            <!--<button onclick="wirusy();" disabled="true">wirusy jokeware (nie polecam)</button>--><br>
+            <!--<audio controls src="https://cdn.discordapp.com/attachments/1180534858582331442/1185588651783114822/YourHomeIsntHome_-_Albion_Online.mp3?ex=66666439&is=666512b9&hm=751eb857179d731a0acf9081560966c5245602022e1014f88e7972130d4fc9a1&"></audio>-->
+        </center>
+        <script>
+            function ciemny() {
+                document.querySelector('html').style = 'background-color: black; color: white;'
+            }
+            function jasny() {
+                document.querySelector('html').style = 'background-color: white; color: black;'
+            }
+            function socialmedia() {
+                const social = document.createElement('div')
+                social.id = 'socialmedias'
+                social.innerHTML = '<br><br><center><span>Social Medias: </span><button class="x" onclick="removesocial();">X</button><br><button class="social" onclick="alert(`soundbeat3d1`)">discord</button><br><button class="social" onclick="window.open(`https://www.youtube.com/@soundbeat3d1`, `_blank`)">youtube</button><br><button class="social" onclick="window.open(`https://scratch.mit.edu/users/soundbeat3d1/`, `_blank`)">Scratch</button></center>'
+                document.body.appendChild(social)
+            }
+            function removesocial() {
+                document.getElementById("socialmedias").remove();
+            }
+            function wirusy() {
+                //nawet nie próbujcie
+                location.href='about:blank'
+                /*const jokeware = document.createElement('div')
+                jokeware.id = 'wirusy'
+                jokeware.innerHTML = '<br><br><center><span>Wirusy Jokeware: </span><button class="x" onclick="removewirusy();">X</button><br><span>nie polecam wchodzić na nie</span><br><span>ale możecie je użyć do osób żeby zrobić pranka</span><br><a href="https://theannoyingsite.com/">theannoyingsite.com (ORYGINALNY)</a><br><a href="https://ptoszek.pl/" target="_blank">ptoszek.pl</a><br><button class="wirusy">w ogóle są jeszcze inne ale oni mają gorsze filmy (np. p0rn) i mają złe skrypty</button><br><button class="wirusy1">(widziane były linki na streamie dawida jaspera)</button></center>'
+                document.body.appendChild(jokeware)*/
+            }
+            function removewirusy() {
+                document.getElementById("wirusy").remove();
+            }
+            function emulator() {
+                const emulator = document.createElement('div')
+                emulator.id = 'emulator'
+                emulator.innerHTML = `<br><br><center><span>Windows Emulator: </span><button class="x" onclick="removeemulator();">X</button><br>
+                    <select id='windows' style="width: 125px; height: 50px;">
+                        <option value="11">Windows 11</option>
+                        <option value="10">Windows 10</option>
+                        <option value="7">Windows 7</option>
+                        <option value="vista">Windows Vista</option>
+                        <option value="xp">Windows XP</option>
+                        <option value="xpr">Windows XP (Laggy/Realistic)</option>
+                        <option value="2000">Windows 2000</option>
+                        <option value="98">Windows 98</option>
+                        <option value="98i">Windows 98 (Icons)</option>
+                        <option value="95">Windows 95</option>
+                        <option value="31">Windows 3.1</option>
+                        <option value="1">Windows 1.01</option>
+                        <optgroup label="Fanmade">
+                            <option value="930">Windows 93 V0</option>
+                            <option value="931">Windows 93 V1</option>
+                            <option value="932">Windows 93 V2</option>
+                            <option value="933">Windows 93 V3 (Beta)</option>
+                        </optgroup>
+                    </select>
+                    <button onclick="checkemulator();">Start Emulation</button></center>` // reklamy + adblocker bypasser: <option value="7r">Windows 7 (Ads/Realistic)</option>
+                document.body.appendChild(emulator)
+            }
+            function removeemulator() {
+                document.getElementById('emulator').remove();
+            }
+            function checkemulator() {
+                var emulator = document.getElementById('windows');
+                var emulatorvalue = emulator.options[emulator.selectedIndex].value
+                if (emulatorvalue === "10") {
+                    location.href='https://scratch.mit.edu/projects/87824979/embed'
+                } else if (emulatorvalue === "11") {
+                    location.href='https://turbowarp.org/929570102/embed'
+                } else if (emulatorvalue === "7") {
+                    location.href='https://scratch.mit.edu/projects/198975465/embed'
+                // reklamy + adblocker bypasser
+                /*
+                } else if (emulatorvalue === "7r") {
+                    location.href='https://win7simu.visnalize.com'
+                */
+                } else if (emulatorvalue === "vista") {
+                    location.href='https://scratch.mit.edu/projects/1319228/embed'
+                } else if (emulatorvalue === "xp") {
+                    location.href='https://scratch.mit.edu/projects/41582728/embed'
+                } else if (emulatorvalue === 'xpr') {
+                    location.href='https://lrusso.github.io/VirtualXP/VirtualXP.htm'
+                } else if (emulatorvalue === "2000") {
+                    location.href='https://copy.sh/v86/?profile=windows2000'
+                } else if (emulatorvalue === "98") {
+                    location.href='https://copy.sh/v86/?profile=windows98'
+                } else if (emulatorvalue === '98i') {
+                    location.href='https://win98icons.alexmeub.com'
+                } else if (emulatorvalue === "95") {
+                    location.href='https://copy.sh/v86/?profile=windows95'
+                } else if (emulatorvalue === "31") {
+                    location.href='https://copy.sh/v86/?profile=windows31'
+                } else if (emulatorvalue === "1") {
+                    location.href='https://copy.sh/v86/?profile=windows1'
+                } else if (emulatorvalue === '930') {
+                    location.href='https://v0.windows93.net'
+                } else if (emulatorvalue === '931') {
+                    location.href='https://v1.windows93.net'
+                } else if (emulatorvalue === '932') {
+                    location.href='https://v2.windows93.net'
+                } else if (emulatorvalue === '933') {
+                    location.href='https://v3.windows93.net'
+                }
+            }
+            function minecraft() {
+                const minecraft = document.createElement('div')
+                minecraft.id = 'minecraft'
+                minecraft.innerHTML = `<br><br><center><span>Minecraft Emulator: </span><button class="x" onclick="removeminecraft();">X</button><br><a>Jeżeli wybrałeś wersje "0.3.5" wpisz 'y' żeby zobaczyć kursor</a><br>
+                    <select id='stylminecraft' style="width: 125px; height: 50px;">
+                        <option value="alpha">v.0.0.23 - Alpha</option>
+                        <option value="indev">v.0.1 - Alpha (Indev)</option>
+                        <option value="scratch">v.0.3.4 - Alpha (Scratch)</option>
+                        <option value="scratch2">v.0.4 - Alpha (Scratch)</option>
+                        <option value="beta">v.1.3 - Beta</option>
+                        <option value="beta2">v.1.5.2 - Beta</option>
+                        <option value="2d">v.1.7.1 - 2D</option>
+                        <option value="5">v.1.7.2 - Release</option>
+                        <option value="1">v.1.7.3 - Release</option>
+                        <option value="4">v.1.8.4 - Release</option>
+                        <option value="2">v.1.8.8 - Release</option>
+                        <option value="3">v.2 - Fanmade</option>
+                    </select>
+                    <button onclick="checkminecraft();">Włącz Minecrafta</button></center>`
+                document.body.appendChild(minecraft)
+            }
+            function removeminecraft() {
+                document.getElementById('minecraft').remove();
+            }
+            function checkminecraft() {
+                var minecraft = document.getElementById('stylminecraft');
+                var minecraftvalue = minecraft.options[minecraft.selectedIndex].value
+                if (minecraftvalue === "alpha") {
+                    location.href='https://classic.minecraft.net'
+                } else if (minecraftvalue === "indev") {
+                    location.href='https://eaglercraft.com/mc/indev/'
+                } else if (minecraftvalue === "scratch") {
+                    location.href='https://eaglercraft.com/mc/scratch/'
+                } else if (minecraftvalue === "scratch2") {
+                    location.href='https://experiments.turbowarp.org/pointerlock/908626779/embed'
+                } else if (minecraftvalue === "beta") {
+                    location.href='https://eaglercraft.com/mc/b1.3/'
+                } else if (minecraftvalue === 'beta2') {
+                    location.href='https://eaglercraft.com/mc/b1.7.3/'
+                } else if (minecraftvalue === '2d') {
+                    location.href='https://scratch.mit.edu/projects/937396147/embed'
+                } else if (minecraftvalue === '5') {
+                    location.href='https://eaglercraft-bj5.pages.dev'
+                } else if (minecraftvalue === '1') {
+                    location.href='https://eaglercraft.com/mc/1.5.2/'
+                } else if (minecraftvalue === '4') {
+                    location.href='https://eaglercraftx.pages.dev'
+                } else if (minecraftvalue === '2') {
+                    location.href='https://eaglercraft.com/mc/1.8.8/'
+                } else if (minecraftvalue === '3') {
+                    location.href='https://bloxd.io'
+                }
+            }
+            function update() {
+                const fake = document.createElement('div')
+                fake.id = 'fakeupdate'
+                fake.innerHTML = `<br><br><center><span>Fake Update Emulator: </span><button class="x" onclick="removeupdate();">X</button><br><a>Ctrl +/- = zwiększyć/zmiejszyć rozmiar</a><br><a>F11 = tryb pełnoekranowy</a><br>
+                    <select id='fake' style="width: 125px; height: 50px;">
+                        <option value="11">Windows 11</option>
+                        <option value="10">Windows 8/10</option>
+                        <option value="7">Windows 7</option>
+                        <option value="vista">Windows Vista</option>
+                        <option value="xp">Windows XP</option> 
+                        <option value="98">Windows 98</option>
+                        <option value="mac">MacOS</option>
+                        <optgroup label="Special">
+                            <option value="11i">Windows 11 Install</option>
+                            <option value="steami">Steam OS Install</option>
+                            <option value="wc">WannaCry</option>
+                            <option value="su">Windows Sarcastic Update</option>
+                        </optgroup>
+                    </select>
+                    <button onclick="checkupdate();">Start Fake Update</button><br><button class="credits" onclick="window.open('https://fakeupdate.net')">Credits: fakeupdate.net</button></center>`
+                document.body.appendChild(fake)
+            }
+            function removeupdate() {
+                document.getElementById('fakeupdate').remove();
+            }
+            function checkupdate() {
+                var update = document.getElementById('fake');
+                var updatevalue = update.options[update.selectedIndex].value
+                if (updatevalue === '11') {
+                    location.href='https://fakeupdate.net/win10ue/'
+                } else if (updatevalue === '10') {
+                    location.href='https://fakeupdate.net/win8/'
+                } else if (updatevalue === '7') {
+                    location.href='https://fakeupdate.net/win7/'
+                } else if (updatevalue === 'vista') {
+                    location.href='https://fakeupdate.net/vista/'
+                } else if (updatevalue === 'xp') {
+                    location.href='https://fakeupdate.net/xp/'
+                } else if (updatevalue === "98") {
+                    location.href='https://fakeupdate.net/windows98k/'
+                } else if (updatevalue === "mac") {
+                    location.href='https://fakeupdate.net/apple/'
+                } else if (updatevalue === "11i") {
+                    location.href='https://fakeupdate.net/win11/'
+                } else if (updatevalue === "steami") {
+                    location.href='https://fakeupdate.net/steam/'
+                } else if (updatevalue === 'wc') {
+                    location.href='https://fakeupdate.net/wnc/'
+                } else if (updatevalue === 'su') {
+                    location.href='https://fakeupdate.net/sarcastic/'
+                }
+            }
+            function bsod() {
+                const bsodemulator = document.createElement('div')
+                bsodemulator.id = 'bsod'
+                bsodemulator.innerHTML = `<br><br><center><span>BSOD Emulator: </span><button class="x" onclick="removebsod();">X</button><br><a>Ctrl +/- = zwiększyć/zmiejszyć rozmiar</a><br><a>F11 = tryb pełnoekranowy</a><br>
+                    <select id='fakebsod' style="width: 125px; height: 50px;">
+                        <option value="11">Windows 11</option>
+                        <option value="10">Windows 8/10</option>
+                        <option value="7">Windows 7</option>
+                        <option value="vista">Windows Vista</option>
+                        <option value="xp">Windows XP</option> 
+                        <option value="mac">MacOS</option>
+                        <optgroup label="Special">
+                            <option value="su">Windows 11</option>
+                        </optgroup>
+                    </select>
+                    <button onclick="checkbsod();">Start BSOD</button><br><button class="credits" onclick="window.open('https://fakeupdate.net')">Credits: fakeupdate.net</button></center>`
+                document.body.appendChild(bsodemulator)
+            }
+            function removebsod() {
+                document.getElementById('bsod').remove();
+            }
+            function checkbsod() {
+                var update = document.getElementById('fakebsod');
+                var updatevalue = update.options[update.selectedIndex].value
+                if (updatevalue === '11') {
+                    location.href='https://fakeupdate.net/win10ue/bsod.html'
+                } else if (updatevalue === '10') {
+                    location.href='https://fakeupdate.net/win8/bsod.html'
+                } else if (updatevalue === '7') {
+                    location.href='https://fakeupdate.net/win7/bsod.html'
+                } else if (updatevalue === 'vista') {
+                    location.href='https://fakeupdate.net/vista/bsod.html'
+                } else if (updatevalue === 'xp') {
+                    location.href='https://fakeupdate.net/xp/bsod.html'
+                } else if (updatevalue === "mac") {
+                    location.href='https://fakeupdate.net/apple/panic.html'
+                } else if (updatevalue === 'su') {
+                    location.href='https://fakeupdate.net/sarcastic/bsod.html'
+                }
+            }
+            function gry() {
+                const gry = document.createElement('div')
+                gry.id = 'grynascratch'
+                gry.innerHTML = `<br><br><center><span>Gry: </span><button class="x" onclick="removegry();">X</button><br><a>Nostalgia:</a>
+                    <br><button class="social" onclick="window.open('https://98.js.org/programs/pinball/space-cadet.html')">3D Pinball</button>
+                    <button class="social" onclick="window.open('https://98.js.org/programs/minesweeper/index.html')">Minesweeper</button>
+                    <button class="social" onclick="window.open('https://98.js.org/programs/js-solitaire/index.html')">Solitaire</button><br><a>Scratch:</a><br>
+                    <button class="social" onclick="window.open('https://scratch.mit.edu/projects/937405578/embed')">Stick Platformer Demo</button>
+                    <button class="social" onclick="window.open('https://scratch.mit.edu/projects/937431934/embed')">Roblox</button>
+                    <button class="social" onclick="window.open('https://scratch.mit.edu/projects/937721458/embed')">Ball Blast</button>
+                    <button class="social" onclick="window.open('https://scratch.mit.edu/projects/937798890/embed')">City Simulator</button>
+                    <button class="social" onclick="window.open('https://scratch.mit.edu/projects/937805503/embed')">Fortnite</button>
+                    <button class="social" onclick="window.open('https://scratch.mit.edu/projects/971565130/embed')">Flappy Bird</button>
+                    <button class="social" onclick="window.open('https://scratch.mit.edu/projects/971578213/embed')">Geometry Dash</button>
+                    <button class="social" onclick="window.open('https://scratch.mit.edu/projects/1017709181/embed')">Brawl Stars Simulator</button>
+                    <button class="social" onclick="window.open('https://scratch.mit.edu/projects/1019171386/embed')">Brawl Stars</button><br><a>Among Us:</a><br>
+                    <button class="social" onclick="window.open('https://g.vseigru.net/7/igra-among-as-prosto-predatel/')">Among Us Remake</button>
+                    <button class="social" onclick="window.open('https://g.vseigru.net/7/igra-among-as-onlajn-versiya/index-en.html')">Among Us Russian Version V1</button>
+                    <button class="social" onclick="window.open('https://g.vseigru.net/7/igra-among-as-na-russkom-odinochnyj-rezhim/en/')">Among Us Russian Version V2</button><br><a>Inne:</a><br>
+                    <button class="social" onclick="window.open('https://playcanv.as/p/2OlkUaxF')">Flappy Bird (Oryginalny)</button>
+                    <button class="social" onclick="window.open('https://slowroads.io')">Jazda ulicą (slowroads.io)</button>
+                    <button class="social" onclick="window.open('https://ev.io')">Strzelanie (ev.io)</button></center>`
+                document.body.appendChild(gry)
+            }
+            function removegry() {
+                document.getElementById("grynascratch").remove();
+            }
+            function programy() {
+                const programy = document.createElement('div')
+                programy.id = 'programynascratch'
+                programy.innerHTML = `<br><br><center><span>Programy: </span><button class="x" onclick="removeprogramy();">X</button><br><a>Screen Saver (Nostalgia):</a>
+                    <br><select id='screensaver' style="width: 125px; height: 50px;">
+                        <option value="p">3D Pipes</option>
+                        <option value="fb">3D Flower Box</option>
+                    </select><button onclick="checkscreensaver();">Włącz Screen Saver</button><br><a>Inne:</a><br>
+                    <button class="social" onclick="window.open('https://jspaint.app')">Paint</button>
+                    <button class="social" onclick="window.open('https://mcalculator.muzam1l.com')">Kalkulator</button>
+                    <button class="social" onclick="window.open('https://98.js.org/programs/notepad/index.html')">Notatnik</button></center>`
+                document.body.appendChild(programy)
+            }
+            function removeprogramy() {
+                document.getElementById("programynascratch").remove();
+            }
+            function checkscreensaver() {
+                var screensaver = document.getElementById('screensaver');
+                var screensaverupdate = screensaver.options[screensaver.selectedIndex].value
+                if (screensaverupdate === 'p') {
+                    location.href='https://1j01.github.io/pipes/'
+                } else if (screensaverupdate === 'fb') {
+                    location.href='https://98.js.org/programs/3D-FlowerBox/index.html'
+                }
+            }
+        </script>
+    </body>
+</html>
