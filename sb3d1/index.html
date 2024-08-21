@@ -50,7 +50,7 @@
             <button onclick="gry();">Gry</button>
             <button onclick="programy();">Programy</button>
             <button onclick="window.open('https://www.youtube.com/playlist?list=PL61a0i9NMQn7LYfacBQ0Q-oWUcJ3J8UhR')">Kolbaser Project Muzy</button>
-            <button onclick="alert('clash royale, brawl stars, minecraft, among us, roblox, room smash + rycze project nie pozwala mi cheaty do gier')">polecane gry na android</button>
+            <button onclick="apkdownload()">gry na android z cheatami + download</button>
             <button onclick="socialmedia();">moje social medie</button>
             <!--<button onclick="wirusy();" disabled="true">wirusy jokeware (nie polecam)</button>--><br>
             <!--<audio controls src="https://cdn.discordapp.com/attachments/1180534858582331442/1185588651783114822/YourHomeIsntHome_-_Albion_Online.mp3?ex=66666439&is=666512b9&hm=751eb857179d731a0acf9081560966c5245602022e1014f88e7972130d4fc9a1&"></audio>-->
@@ -89,13 +89,16 @@
                     <select id='windows' style="width: 125px; height: 50px;">
                         <option value="11">Windows 11</option>
                         <option value="10">Windows 10</option>
+                        <option value="8">Windows 8</option>
                         <option value="7">Windows 7</option>
                         <option value="vista">Windows Vista</option>
                         <option value="xp">Windows XP</option>
                         <option value="xpr">Windows XP (Laggy/Realistic)</option>
+                        <option value="me">Windows ME</option>
                         <option value="2000">Windows 2000</option>
                         <option value="98">Windows 98</option>
                         <option value="98i">Windows 98 (Icons)</option>
+                        <option value="4">Windows NT 4.0</option>
                         <option value="95">Windows 95</option>
                         <option value="31">Windows 3.1</option>
                         <option value="1">Windows 1.01</option>
@@ -119,8 +122,10 @@
                     location.href='https://scratch.mit.edu/projects/87824979/embed'
                 } else if (emulatorvalue === "11") {
                     location.href='https://turbowarp.org/929570102/embed'
+                } else if (emulatorvalue === '8') {
+                    location.href='https://scratch.mit.edu/projects/709486982/fullscreen/'
                 } else if (emulatorvalue === "7") {
-                    location.href='https://scratch.mit.edu/projects/198975465/embed'
+                    location.href='https://scratch.mit.edu/projects/236363429/fullscreen/'
                 // reklamy + adblocker bypasser
                 /*
                 } else if (emulatorvalue === "7r") {
@@ -132,12 +137,16 @@
                     location.href='https://scratch.mit.edu/projects/41582728/embed'
                 } else if (emulatorvalue === 'xpr') {
                     location.href='https://lrusso.github.io/VirtualXP/VirtualXP.htm'
+                } else if (emulatorvalue === 'me') {
+                    location.href='http://www.virtualdesktop.org/complete/me/index.html'
                 } else if (emulatorvalue === "2000") {
                     location.href='https://copy.sh/v86/?profile=windows2000'
                 } else if (emulatorvalue === "98") {
                     location.href='https://copy.sh/v86/?profile=windows98'
                 } else if (emulatorvalue === '98i') {
                     location.href='https://win98icons.alexmeub.com'
+                } else if (emulatorvalue === '4') {
+                    location.href='http://www.virtualdesktop.org/complete/nt4/index.html'
                 } else if (emulatorvalue === "95") {
                     location.href='https://copy.sh/v86/?profile=windows95'
                 } else if (emulatorvalue === "31") {
@@ -157,7 +166,7 @@
             function minecraft() {
                 const minecraft = document.createElement('div')
                 minecraft.id = 'minecraft'
-                minecraft.innerHTML = `<br><br><center><span>Minecraft Emulator: </span><button class="x" onclick="removeminecraft();">X</button><br><a>Jeżeli wybrałeś wersje "0.3.5" wpisz 'y' żeby zobaczyć kursor</a><br>
+                minecraft.innerHTML = `<br><br><center><span>Minecraft Emulator: </span><button class="x" onclick="removeminecraft();">X</button><br><a>Jeżeli wybrałeś wersje "0.4" wpisz 'y' żeby zobaczyć kursor</a><br>
                     <select id='stylminecraft' style="width: 125px; height: 50px;">
                         <option value="alpha">v.0.0.23 - Alpha</option>
                         <option value="indev">v.0.1 - Alpha (Indev)</option>
@@ -333,10 +342,14 @@
                     <br><select id='screensaver' style="width: 125px; height: 50px;">
                         <option value="p">3D Pipes</option>
                         <option value="fb">3D Flower Box</option>
-                    </select><button onclick="checkscreensaver();">Włącz Screen Saver</button><br><a>Inne:</a><br>
+                    </select><button onclick="checkscreensaver();">Włącz Screen Saver</button><br><a>Kalkulator:</a>
+                    <br><select id='kalkulator' style="width: 125px; height: 50px;">
+                        <option value="1">Styl Windows 11</option>
+                        <option value="9">Styl Windows 98</option>
+                    </select><button onclick="checkcalc();">Otwórz Kalkulator</button><br><a>Inne:</a><br>
                     <button class="social" onclick="window.open('https://jspaint.app')">Paint</button>
-                    <button class="social" onclick="window.open('https://mcalculator.muzam1l.com')">Kalkulator</button>
-                    <button class="social" onclick="window.open('https://98.js.org/programs/notepad/index.html')">Notatnik</button></center>`
+                    <button class="social" onclick="window.open('https://98.js.org/programs/notepad/index.html')">Notatnik</button>
+                    <br><iframe src='http://www.virtualdesktop.org/apps/index.html' style='height: 345px; width: 500px;' frameBorder="0"></center>`
                 document.body.appendChild(programy)
             }
             function removeprogramy() {
@@ -349,6 +362,25 @@
                     location.href='https://1j01.github.io/pipes/'
                 } else if (screensaverupdate === 'fb') {
                     location.href='https://98.js.org/programs/3D-FlowerBox/index.html'
+                }
+            }
+            function checkcalc() {
+                var calc = document.getElementById('kalkulator');
+                var calcupdate = calc.options[calc.selectedIndex].value
+                if (calcupdate === '1') {
+                    window.open('https://mcalculator.muzam1l.com')
+                } else if (calcupdate === '9') {
+                    window.open('https://98.js.org/programs/calculator/index.html')
+                }
+            }
+            function apkdownload() {
+                //alert('clash royale, brawl stars, minecraft, among us, roblox, room smash + rycze project nie pozwala mi cheaty do gier')
+                if (confirm('Wybrana aplikacja: Schoolboy Runaway\nOK=Pobierz\nAnuluj=Dalej')) {
+                    location.href = 'https://www.mediafire.com/file/xt39pkb6lje9n6p/SchoolBoyRunaway%28CiberMod%29.apk/file'
+                } else {
+                    if (confirm('Wybrana aplikacja: Angry Neighbor\nOK=Pobierz\nAnuluj=Wyjdz')) {
+                        location.href = 'https://www.mediafire.com/file/mmzdv0sd5wz8kvy/Angry+Neighbor[MODMENU_By_CiberHacker].apk/file'
+                    }
                 }
             }
         </script>
