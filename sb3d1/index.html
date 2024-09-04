@@ -14,6 +14,9 @@
                 padding: 10px 25px;
                 font-size: 16px;
             }
+            img {
+                margin: 15px;
+            }
             .x {
                 padding: 5px 5px;
                 font-size: 12px;
@@ -33,59 +36,91 @@
                 background-color: black;
                 color: white;
             }
+            .fade {
+    margin-top: 25px;
+    font-size: 21px;
+    text-align: center;
+    animation: fadein 1000ms;
+    -moz-animation: fadein 1000ms; /* Firefox */
+    -webkit-animation: fadein 1000ms; /* Safari and Chrome */
+    -o-animation: fadein 1000ms; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
         </style>
+        <link rel="icon" type="image/x-icon" href="https://cdn.discordapp.com/avatars/1126146694975852674/df23797dcdf270f2c9a099c8dd77a707.png">
     </head>
     <body>
+        <button style="float: right; display: flex; align-items: center; justify-content: center; margin-top: -10px; margin-right: 1px;" onclick="ciemny()">Tryb Ciemny</button>
+        <button style="float: right; display: flex; align-items: center; justify-content: center; margin-top: -10px; margin-right: 1px;" onclick="jasny()">Tryb Jasny</button>
         <h1>soundbeat3d1.github.io</h1>
         <h2>moja osrana (dobra) strona [BEZ REKLAM]</h2>
-        <h3>tu są różne rzeczy xd, klik klik</h3>
-        <button onclick="ciemny();">Tryb Ciemny</button>
-        <button onclick="jasny();">Tryb Jasny</button><br><hr> <!--style="width: 100%;"-->
+        <h3>Aktualne wydarzenie: <a style="color: aquamarine;">Szkoła, Schoolboy Runaway </a><a style="color: crimson;" onclick="alert('Wydarzenie Szkoła:\n- Dodano Librus\n- Dodano ukryj nazwę strony\n\nWydarzenie Schoolboy Runaway:\n- Gra dzwięk po anulowaniu pobierania schoolboy runaway\n- Tryb ciemny')">Zobacz nowości</a></h3>
+        <button onclick="socialmedia();">moje social medie/Contact</button>
+        <button onclick="ukryj()">ukryj nazwę strony</button>
+        <br><hr>
         <center>
             <button onclick="window.open('https://scratch.mit.edu/projects/663927720/embed')">Jaki jest mój OS? (OS Detector)</button>
-            <button onclick="minecraft();">Minecraft Emulator</button>
             <button onclick="update();">Fake Update Emulator</button>
-            <button onclick="emulator();">Windows Emulator</button>
             <button onclick="bsod();">BSOD Emulator</button>
-            <button onclick="gry();">Gry</button>
-            <button onclick="programy();">Programy</button>
             <button onclick="window.open('https://www.youtube.com/playlist?list=PL61a0i9NMQn7LYfacBQ0Q-oWUcJ3J8UhR')">Kolbaser Project Muzy</button>
-            <button onclick="apkdownload()">gry na android z cheatami + download</button>
-            <button onclick="socialmedia();">moje social medie</button>
-            <!--<button onclick="wirusy();" disabled="true">wirusy jokeware (nie polecam)</button>--><br>
-            <!--<audio controls src="https://cdn.discordapp.com/attachments/1180534858582331442/1185588651783114822/YourHomeIsntHome_-_Albion_Online.mp3?ex=66666439&is=666512b9&hm=751eb857179d731a0acf9081560966c5245602022e1014f88e7972130d4fc9a1&"></audio>-->
+            <br>
+            <div class="fade"><img src="minecraft.png" width="60px" title="Minecraft Emulator" id="minecraft" onclick="minecraft()" draggable="false"><img src="windows.png" width="60px" title="Windows Emulator" onclick="emulator()" id="emulator" draggable="false"><img src="game.png" width="60px" onclick="gry()" title="Gry" draggable="false"><img id="apps" src="apps.png" width="60px" onclick="programy()" title="Programy" draggable="false"><img src="download.png" width="60px" id="download" onclick="apkdownload()" title="Gry dla android z cheatami" draggable="false"><img src="librus.png" width="60px" title="Librus" onclick="librus()" draggable="false"></div>
+            <audio id="aha" src="aha.MP3"></audio>
         </center>
         <script>
+            ciemny()
             function ciemny() {
                 document.querySelector('html').style = 'background-color: black; color: white;'
+                document.getElementById('apps').src = "appswhite.png"
             }
             function jasny() {
                 document.querySelector('html').style = 'background-color: white; color: black;'
+                document.getElementById('apps').src = "apps.png"
             }
             function socialmedia() {
                 const social = document.createElement('div')
                 social.id = 'socialmedias'
-                social.innerHTML = '<br><br><center><span>Social Medias: </span><button class="x" onclick="removesocial();">X</button><br><button class="social" onclick="alert(`soundbeat3d1`)">discord</button><br><button class="social" onclick="window.open(`https://www.youtube.com/@soundbeat3d1`, `_blank`)">youtube</button><br><button class="social" onclick="window.open(`https://scratch.mit.edu/users/soundbeat3d1/`, `_blank`)">Scratch</button></center>'
+                social.innerHTML = '<br><center><span>Social Medias: </span><button class="x" onclick="removesocial();">X</button><br><button class="social" onclick="alert(`soundbeat3d1`)">discord</button><br><button class="social" onclick="window.open(`https://www.youtube.com/@soundbeat3d1`, `_blank`)">youtube</button><br><button class="social" onclick="window.open(`https://scratch.mit.edu/users/soundbeat3d1/`, `_blank`)">Scratch</button></center>'
                 document.body.appendChild(social)
             }
             function removesocial() {
                 document.getElementById("socialmedias").remove();
             }
-            function wirusy() {
-                //nawet nie próbujcie
-                location.href='about:blank'
-                /*const jokeware = document.createElement('div')
-                jokeware.id = 'wirusy'
-                jokeware.innerHTML = '<br><br><center><span>Wirusy Jokeware: </span><button class="x" onclick="removewirusy();">X</button><br><span>nie polecam wchodzić na nie</span><br><span>ale możecie je użyć do osób żeby zrobić pranka</span><br><a href="https://theannoyingsite.com/">theannoyingsite.com (ORYGINALNY)</a><br><a href="https://ptoszek.pl/" target="_blank">ptoszek.pl</a><br><button class="wirusy">w ogóle są jeszcze inne ale oni mają gorsze filmy (np. p0rn) i mają złe skrypty</button><br><button class="wirusy1">(widziane były linki na streamie dawida jaspera)</button></center>'
-                document.body.appendChild(jokeware)*/
-            }
-            function removewirusy() {
-                document.getElementById("wirusy").remove();
-            }
             function emulator() {
                 const emulator = document.createElement('div')
                 emulator.id = 'emulator'
-                emulator.innerHTML = `<br><br><center><span>Windows Emulator: </span><button class="x" onclick="removeemulator();">X</button><br>
+                emulator.innerHTML = `<br><center><span>Windows Emulator: </span><button class="x" onclick="removeemulator();">X</button><br>
                     <select id='windows' style="width: 125px; height: 50px;">
                         <option value="11">Windows 11</option>
                         <option value="10">Windows 10</option>
@@ -118,6 +153,7 @@
             function checkemulator() {
                 var emulator = document.getElementById('windows');
                 var emulatorvalue = emulator.options[emulator.selectedIndex].value
+                document.getElementById('emulator').src = 'loading.gif'
                 if (emulatorvalue === "10") {
                     location.href='https://scratch.mit.edu/projects/87824979/embed'
                 } else if (emulatorvalue === "11") {
@@ -166,12 +202,12 @@
             function minecraft() {
                 const minecraft = document.createElement('div')
                 minecraft.id = 'minecraft'
-                minecraft.innerHTML = `<br><br><center><span>Minecraft Emulator: </span><button class="x" onclick="removeminecraft();">X</button><br><a>Jeżeli wybrałeś wersje "0.4" wpisz 'y' żeby zobaczyć kursor</a><br>
+                minecraft.innerHTML = `<br><center><span>Minecraft Emulator: </span><button class="x" onclick="removeminecraft();">X</button><br><a>Jeżeli wybrałeś wersje "0.4.1" wpisz 'y' żeby zobaczyć kursor</a><br>
                     <select id='stylminecraft' style="width: 125px; height: 50px;">
                         <option value="alpha">v.0.0.23 - Alpha</option>
                         <option value="indev">v.0.1 - Alpha (Indev)</option>
                         <option value="scratch">v.0.3.4 - Alpha (Scratch)</option>
-                        <option value="scratch2">v.0.4 - Alpha (Scratch)</option>
+                        <option value="scratch2">v.0.4.1 - Alpha (Scratch)</option>
                         <option value="beta">v.1.3 - Beta</option>
                         <option value="beta2">v.1.5.2 - Beta</option>
                         <option value="2d">v.1.7.1 - 2D</option>
@@ -190,6 +226,7 @@
             function checkminecraft() {
                 var minecraft = document.getElementById('stylminecraft');
                 var minecraftvalue = minecraft.options[minecraft.selectedIndex].value
+                document.getElementById('minecraft').src = 'loading.gif'
                 if (minecraftvalue === "alpha") {
                     location.href='https://classic.minecraft.net'
                 } else if (minecraftvalue === "indev") {
@@ -219,7 +256,7 @@
             function update() {
                 const fake = document.createElement('div')
                 fake.id = 'fakeupdate'
-                fake.innerHTML = `<br><br><center><span>Fake Update Emulator: </span><button class="x" onclick="removeupdate();">X</button><br><a>Ctrl +/- = zwiększyć/zmiejszyć rozmiar</a><br><a>F11 = tryb pełnoekranowy</a><br>
+                fake.innerHTML = `<br><center><span>Fake Update Emulator: </span><button class="x" onclick="removeupdate();">X</button><br><a>Ctrl +/- = zwiększyć/zmiejszyć rozmiar</a><br><a>F11 = tryb pełnoekranowy</a><br>
                     <select id='fake' style="width: 125px; height: 50px;">
                         <option value="11">Windows 11</option>
                         <option value="10">Windows 8/10</option>
@@ -271,7 +308,7 @@
             function bsod() {
                 const bsodemulator = document.createElement('div')
                 bsodemulator.id = 'bsod'
-                bsodemulator.innerHTML = `<br><br><center><span>BSOD Emulator: </span><button class="x" onclick="removebsod();">X</button><br><a>Ctrl +/- = zwiększyć/zmiejszyć rozmiar</a><br><a>F11 = tryb pełnoekranowy</a><br>
+                bsodemulator.innerHTML = `<br><center><span>BSOD Emulator: </span><button class="x" onclick="removebsod();">X</button><br><a>Ctrl +/- = zwiększyć/zmiejszyć rozmiar</a><br><a>F11 = tryb pełnoekranowy</a><br>
                     <select id='fakebsod' style="width: 125px; height: 50px;">
                         <option value="11">Windows 11</option>
                         <option value="10">Windows 8/10</option>
@@ -311,7 +348,7 @@
             function gry() {
                 const gry = document.createElement('div')
                 gry.id = 'grynascratch'
-                gry.innerHTML = `<br><br><center><span>Gry: </span><button class="x" onclick="removegry();">X</button><br><a>Nostalgia:</a>
+                gry.innerHTML = `<br><center><span>Gry: </span><button class="x" onclick="removegry();">X</button><br><a>Nostalgia:</a>
                     <br><button class="social" onclick="window.open('https://98.js.org/programs/pinball/space-cadet.html')">3D Pinball</button>
                     <button class="social" onclick="window.open('https://98.js.org/programs/minesweeper/index.html')">Minesweeper</button>
                     <button class="social" onclick="window.open('https://98.js.org/programs/js-solitaire/index.html')">Solitaire</button><br><a>Scratch:</a><br>
@@ -338,7 +375,7 @@
             function programy() {
                 const programy = document.createElement('div')
                 programy.id = 'programynascratch'
-                programy.innerHTML = `<br><br><center><span>Programy: </span><button class="x" onclick="removeprogramy();">X</button><br><a>Screen Saver (Nostalgia):</a>
+                programy.innerHTML = `<br><center><span>Programy: </span><button class="x" onclick="removeprogramy();">X</button><br><a>Screen Saver (Nostalgia):</a>
                     <br><select id='screensaver' style="width: 125px; height: 50px;">
                         <option value="p">3D Pipes</option>
                         <option value="fb">3D Flower Box</option>
@@ -349,7 +386,7 @@
                     </select><button onclick="checkcalc();">Otwórz Kalkulator</button><br><a>Inne:</a><br>
                     <button class="social" onclick="window.open('https://jspaint.app')">Paint</button>
                     <button class="social" onclick="window.open('https://98.js.org/programs/notepad/index.html')">Notatnik</button><br>
-                    <button class="social" onclick="window.open('http://www.virtualdesktop.org/apps/index.html')"">Application Desktops</button></center>`
+                    <button class="social" onclick="window.open('http://www.virtualdesktop.org/apps/index.html')">Application Desktops</button></center>`
                 document.body.appendChild(programy)
             }
             function removeprogramy() {
@@ -360,8 +397,10 @@
                 var screensaverupdate = screensaver.options[screensaver.selectedIndex].value
                 if (screensaverupdate === 'p') {
                     location.href='https://1j01.github.io/pipes/'
+                    document.getElementById('apps').src = 'loading.gif'
                 } else if (screensaverupdate === 'fb') {
                     location.href='https://98.js.org/programs/3D-FlowerBox/index.html'
+                    document.getElementById('apps').src = 'loading.gif'
                 }
             }
             function checkcalc() {
@@ -375,13 +414,27 @@
             }
             function apkdownload() {
                 //alert('clash royale, brawl stars, minecraft, among us, roblox, room smash + rycze project nie pozwala mi cheaty do gier')
-                if (confirm('Wybrana aplikacja: Schoolboy Runaway\nOK=Pobierz\nAnuluj=Dalej')) {
+                if (confirm('Wybrana aplikacja: Schoolboy Runaway\nOK = Pobierz\nAnuluj = Dalej')) {
                     location.href = 'https://www.mediafire.com/file/xt39pkb6lje9n6p/SchoolBoyRunaway%28CiberMod%29.apk/file'
+                    document.getElementById('download').src = 'loading.gif'
                 } else {
-                    if (confirm('Wybrana aplikacja: Angry Neighbor\nOK=Pobierz\nAnuluj=Wyjdz')) {
+                    document.getElementById('aha').play();
+                    if (confirm('Wybrana aplikacja: Angry Neighbor\nOK = Pobierz\nAnuluj = Wyjdz')) {
                         location.href = 'https://www.mediafire.com/file/mmzdv0sd5wz8kvy/Angry+Neighbor[MODMENU_By_CiberHacker].apk/file'
+                        document.getElementById('download').src = 'loading.gif'
                     }
                 }
+            }
+            function librus() {
+                if (confirm('Uczeń czy nauczyciel?\nOK = Uczeń (Rodzina)\nAnuluj = Nauczyciel (Szkoła)')) {
+                    window.open('https://portal.librus.pl/rodzina/synergia/loguj')
+                } else {
+                    window.open('https://portal.librus.pl/szkola/synergia/loguj')
+                }
+            }
+            function ukryj() {
+                document.querySelector('h1').innerText = 'hidden'
+                document.title = 'hidden'
             }
         </script>
     </body>
