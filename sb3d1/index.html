@@ -95,7 +95,7 @@
             <button onclick="bsod();">BSOD Emulator</button>
             <button onclick="window.open('https://www.youtube.com/playlist?list=PL61a0i9NMQn7LYfacBQ0Q-oWUcJ3J8UhR')">Kolbaser Project Muzy</button>
             <br>
-            <div class="fade"><img src="minecraft.png" width="60px" title="Minecraft Emulator" id="minecraft" onclick="minecraft()" draggable="false"><img src="windows.png" width="60px" title="Windows Emulator" onclick="emulator()" id="emulator" draggable="false"><img src="game.png" width="60px" onclick="gry()" title="Gry" draggable="false"><img id="apps" src="apps.png" width="60px" onclick="programy()" title="Programy" draggable="false"><img src="download.png" width="60px" id="download" onclick="apkdownload()" title="Gry dla android z cheatami" draggable="false"><img src="librus.png" width="60px" title="Librus" onclick="librus()" draggable="false"></div>
+            <div class="fade"><img src="minecraft.png" width="60px" title="Minecraft Emulator" id="minecraft1" onclick="minecraft()" draggable="false"><img src="windows.png" width="60px" title="Windows Emulator" onclick="emulator()" id="emulator1" draggable="false"><img src="game.png" width="60px" onclick="gry()" title="Gry" draggable="false"><img id="apps" src="apps.png" width="60px" onclick="programy()" title="Programy" draggable="false"><img src="download.png" width="60px" id="download" onclick="apkdownload()" title="Gry dla android z cheatami" draggable="false"><img src="librus.png" width="60px" title="Librus" onclick="librus()" draggable="false"></div>
             <audio id="aha" src="aha.MP3"></audio>
         </center>
         <script>
@@ -153,7 +153,7 @@
             function checkemulator() {
                 var emulator = document.getElementById('windows');
                 var emulatorvalue = emulator.options[emulator.selectedIndex].value
-                document.getElementById('emulator').src = 'loading.gif'
+                document.getElementById('emulator1').src = 'loading.gif'
                 if (emulatorvalue === "10") {
                     location.href='https://scratch.mit.edu/projects/87824979/embed'
                 } else if (emulatorvalue === "11") {
@@ -226,7 +226,7 @@
             function checkminecraft() {
                 var minecraft = document.getElementById('stylminecraft');
                 var minecraftvalue = minecraft.options[minecraft.selectedIndex].value
-                document.getElementById('minecraft').src = 'loading.gif'
+                document.getElementById('minecraft1').src = 'loading.gif'
                 if (minecraftvalue === "alpha") {
                     location.href='https://classic.minecraft.net'
                 } else if (minecraftvalue === "indev") {
