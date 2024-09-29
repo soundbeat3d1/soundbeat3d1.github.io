@@ -14,9 +14,6 @@
                 padding: 10px 25px;
                 font-size: 16px;
             }
-            img {
-                margin: 15px;
-            }
             .x {
                 padding: 5px 5px;
                 font-size: 12px;
@@ -35,6 +32,9 @@
             .credits {
                 background-color: black;
                 color: white;
+            }
+            .fade img {
+                margin: 15px;
             }
             .fade {
     margin-top: 25px;
@@ -85,7 +85,7 @@
         <button style="float: right; display: flex; align-items: center; justify-content: center; margin-top: -10px; margin-right: 1px;" onclick="jasny()">Tryb Jasny</button>
         <h1>soundbeat3d1.github.io</h1>
         <h2>moja osrana (dobra) strona [BEZ REKLAM]</h2>
-        <h3>Aktualne wydarzenie: <a style="color: aquamarine;">Szkoła, Schoolboy Runaway </a><a style="color: crimson;" onclick="alert('Wydarzenie Szkoła:\n- Dodano Librus\n- Dodano ukryj nazwę strony\n\nWydarzenie Schoolboy Runaway:\n- Gra dzwięk po anulowaniu pobierania schoolboy runaway\n- Tryb ciemny')">Zobacz nowości</a></h3>
+        <h3>Aktualne wydarzenie: <a style="color: aquamarine;">Szkoła, Schoolboy Runaway </a><a style="color: crimson;" onclick="alert('Wydarzenie Szkoła:\n- Dodano Librus\n- Dodano ukryj nazwę strony\n\nWydarzenie Schoolboy Runaway:\n- Gra dzwięk po zamknięciu schoolboy runaway\n- Tryb ciemny')">Zobacz nowości</a></h3>
         <button onclick="socialmedia();">moje social medie/Contact</button>
         <button onclick="ukryj()">ukryj nazwę strony</button>
         <br><hr>
@@ -95,7 +95,7 @@
             <button onclick="bsod();">BSOD Emulator</button>
             <button onclick="window.open('https://www.youtube.com/playlist?list=PL61a0i9NMQn7LYfacBQ0Q-oWUcJ3J8UhR')">Kolbaser Project Muzy</button>
             <br>
-            <div class="fade"><img src="minecraft.png" width="60px" title="Minecraft Emulator" id="minecraft1" onclick="minecraft()" draggable="false"><img src="windows.png" width="60px" title="Windows Emulator" onclick="emulator()" id="emulator1" draggable="false"><img src="game.png" width="60px" onclick="gry()" title="Gry" draggable="false"><img id="apps" src="apps.png" width="60px" onclick="programy()" title="Programy" draggable="false"><img src="download.png" width="60px" id="download" onclick="apkdownload()" title="Gry dla android z cheatami" draggable="false"><img src="librus.png" width="60px" title="Librus" onclick="librus()" draggable="false"></div>
+            <div class="fade"><img src="minecraft.png" width="60px" title="Minecraft Emulator" id="minecraft1" onclick="minecraft()" draggable="false"><img src="windows.png" width="60px" title="Windows Emulator" onclick="emulator()" id="emulator1" draggable="false"><img src="game.png" width="60px" onclick="gry()" title="Gry" draggable="false"><img id="apps" src="apps.png" width="60px" onclick="programy()" title="Programy" draggable="false"><img src="download.png" width="60px" id="download" onclick="apkdownload()" title="Gry dla android z cheatami" draggable="false"><img src="librus.png" width="60px" title="Librus" onclick="librus()" draggable="false"><img src="pfactor.png" width="60px" title="Progressive Factor Releases Images" onclick="pfactor()" draggable="false"><img src="schoolboy.png" width="60xp" title="Schoolboy Runaway" onclick="schoolboy()" draggable="false"></div>
             <audio id="aha" src="aha.MP3"></audio>
         </center>
         <script>
@@ -414,15 +414,9 @@
             }
             function apkdownload() {
                 //alert('clash royale, brawl stars, minecraft, among us, roblox, room smash + rycze project nie pozwala mi cheaty do gier')
-                if (confirm('Wybrana aplikacja: Schoolboy Runaway\nOK = Pobierz\nAnuluj = Dalej')) {
-                    location.href = 'https://www.mediafire.com/file/xt39pkb6lje9n6p/SchoolBoyRunaway%28CiberMod%29.apk/file'
+                if (confirm('Wybrana aplikacja: Angry Neighbor\nOK = Pobierz\nAnuluj = Wyjdz')) {
+                    location.href = 'https://www.mediafire.com/file/mmzdv0sd5wz8kvy/Angry+Neighbor[MODMENU_By_CiberHacker].apk/file'
                     document.getElementById('download').src = 'loading.gif'
-                } else {
-                    document.getElementById('aha').play();
-                    if (confirm('Wybrana aplikacja: Angry Neighbor\nOK = Pobierz\nAnuluj = Wyjdz')) {
-                        location.href = 'https://www.mediafire.com/file/mmzdv0sd5wz8kvy/Angry+Neighbor[MODMENU_By_CiberHacker].apk/file'
-                        document.getElementById('download').src = 'loading.gif'
-                    }
                 }
             }
             function librus() {
@@ -435,6 +429,146 @@
             function ukryj() {
                 document.querySelector('h1').innerText = 'hidden'
                 document.title = 'hidden'
+            }
+            function pfactor() {
+                const pfactor = document.createElement('div')
+                pfactor.id = 'progressivefactor'
+                pfactor.innerHTML = `<br><center><span>Progressive Factor Releases Images: </span><button class="x" onclick="removepfactor();">X</button><br>
+                    <img src="https://web.archive.org/web/20070303072130im_/http://pfactor.ru/cd/hb_power3.jpg" width="150" height="150" onclick="window.open('https://www.youtube.com/watch?v=C6xVnUoHEUU')">
+                    <img src="https://web.archive.org/web/20070302232448im_/http://pfactor.ru/cd/live_port4.jpg" width="150" height="150" onclick="window.open('https://www.youtube.com/watch?v=w0N8mYehC60&t=13566s')">
+                    <img src="https://web.archive.org/web/20070303035837im_/http://pfactor.ru/cd/p-factor_vol6.jpg" width="150" height="150" onclick="window.open('https://www.youtube.com/watch?v=Ki6ugMu-J80')">
+                    <img src="https://web.archive.org/web/20060720140643im_/http://www.pfactor.ru/cd/xs_moscow2.jpg" width="150" height="150" onclick="window.open('https://www.youtube.com/watch?v=4rGoVQRBDT4')">
+                    <img src="https://web.archive.org/web/20060720140820im_/http://www.pfactor.ru/cd/p-factor%20vol5.jpg" width="150" height="150" onclick="window.open('https://www.youtube.com/watch?v=_UQTc7GKPWc')">
+                    <img src="https://web.archive.org/web/20060720140807im_/http://www.pfactor.ru/cd/kolb_boom%204.jpg" width="150" height="150" onclick="window.open('https://www.youtube.com/watch?v=Sc82RK8c9Nc')">
+                    <img src="https://web.archive.org/web/20060720140738im_/http://www.pfactor.ru/cd/protivostoyanie.jpg" width="150" height="150" onclick="window.open('https://www.youtube.com/watch?v=ugYQYWt53VI')">
+                    <img src="https://web.archive.org/web/20060720140725im_/http://www.pfactor.ru/cd/hb_power2.jpg" width="150" height="150" onclick="window.ope('nhttps://www.youtube.com/watch?v=fzVuNtRlwuY')">
+                    <img src="https://web.archive.org/web/20060718133019im_/http://www.pfactor.ru/index.files/xs_na_kolesah.jpg" width="150" height="150" onclick="window.open('https://www.youtube.com/watch?v=4hh_xe6ad8g')">
+                    <img src="https://web.archive.org/web/20060718133625im_/http://www.pfactor.ru/index.files/p-factor_v4.jpg" width="150" height="150" onclick="window.open('https://www.youtube.com/watch?v=UzR0DWt8wnk')">
+                    <img src="https://web.archive.org/web/20060718133638im_/http://www.pfactor.ru/index.files/kolb_in_port.jpg" width="150" height="150" onclick="window.open('https://www.youtube.com/watch?v=eyuxiFGR-eo')">
+                    <img src="https://web.archive.org/web/20060507174558im_/http://www.pfactor.ru/cd/p-factor_mp3_1-4.jpg" width="150" height="150">
+                    <img src="https://web.archive.org/web/20060507174315im_/http://www.pfactor.ru/cd/spring_p.jpg" width="150" height="150" onclick="window.open('https://www.youtube.com/watch?v=nG_FxLzx5zM')">
+                    <img src="https://web.archive.org/web/20060507174527im_/http://www.pfactor.ru/cd/trance_active.jpg" width="150" height="150" onclick="window.open('https://www.youtube.com/watch?v=7n51MGK5cC8')">
+                    <img src="https://web.archive.org/web/20060718133443im_/http://www.pfactor.ru/index.files/boom3.jpg" width="150" height="150" onclick="window.open('https://www.youtube.com/watch?v=09HfWBq_jQY')">
+                    <h3>High quality:</h3>
+                    <img src="https://web.archive.org/web/20070308070904im_/http://pfactor.ru/images/articles/xs%20project-tanci.jpg" width="200" height="200" onclick="window.open('https://www.youtube.com/watch?v=NGgmGYx12wk')">
+                    <img src="https://web.archive.org/web/20070308020224im_/http://pfactor.ru/images/articles/Dj%20PlastiX%20-%20dream%20trance%20compilation.jpg" width="200" height="200">
+                    <img src="https://web.archive.org/web/20070308102026im_/http://pfactor.ru/images/articles/Iron%20Project%20-%20mind%20games.jpg" width="200" height="200" onclick="window.open('https://www.youtube.com/watch?v=FEWVlAH9D9U')">
+                    </center>`
+                document.body.appendChild(pfactor)
+            }
+            function removepfactor() {
+                document.getElementById("progressivefactor").remove();
+            }
+            function schoolboy() {
+                const schoolboy = document.createElement('div')
+                schoolboy.id = 'schoolboyrunaway'
+                schoolboy.innerHTML = `<br><center><span>Schoolboy Runaway: </span><button class="x" onclick="removeschoolboy();">X</button><br>
+                <button class="social" onclick="schoolboymods()">Mods</button>
+                <button class="social" onclick="schoolboycheats()">Cheats</button><br>
+                <button class="social" disabled="true">Act 2 (Coming Soon)</button></center>`
+                document.body.appendChild(schoolboy)
+            }
+            function removeschoolboy() {
+                document.getElementById("schoolboyrunaway").remove();
+                document.getElementById('aha').play();
+            }
+            function schoolboymods() {
+                document.getElementById("schoolboyrunaway").remove();
+                const schoolboy = document.createElement('div')
+                schoolboy.id = 'schoolboyrunaway'
+                schoolboy.innerHTML = `<br><center><span>Schoolboy Runaway Mods: </span><button class="x" onclick="removeschoolboy();">X</button><br>
+                <b>If you're under 13 it's not for you, don't download mod</b><br><b>If you have 13-16 years you need to ask parent to play mod</b><br><b>If you're over 16 you can play mod</b><br>
+                <select id='schoolboymods' style="width: 125px; height: 50px;" onchange="infomod(this.value)">
+                    <option value="t">Тимоха (New)</option>
+                    <option value="z">Zombie</option>
+                    <option value="p">Prison</option>
+                    <option value="i">Ice Cream</option>
+                    <option value="f">Future</option>
+                    <option value="s">Scary Mod</option>
+                    <option value="r">Rofl Mode</option>
+                    <option value="m">Minecraft</option>
+                    <option value="l">Secret Location</option>
+                    <option value="a">Fake Schoolboy</option>
+                    <option value="e">Summer</option>
+                </select><button onclick="checkmod();">Download Mod</button><br>
+                <a>Image:</a><br>
+                <img height="200" src="schoolboy/timo.jfif" id="imagemod"><br>
+                <a>Information:</a><br>
+                <a id="infomod">- Installs on original game (Need to delete original), by DH Animations</a>
+                </center>`
+                document.body.appendChild(schoolboy)
+            }
+            function infomod(value) {
+                image = document.getElementById('imagemod')
+                info = document.getElementById('infomod')
+                if (value === 't') {
+                    image.src = 'schoolboy/timo.jfif'
+                    info.innerText = '- Installs on original game (Need to delete original), by DH Animations'
+                } else if (value === 'z') {
+                    image.src = 'schoolboy/zombie.jfif'
+                    info.innerText = '- Installs on original game, by DH Animations'
+                } else if (value === 'p') {
+                    image.src = 'schoolboy/prison.png'
+                    info.innerText - '- Installs on original game, by DH Animations'
+                } else if (value === 'i') {
+                    image.src = 'schoolboy/icecream.jfif'
+                    info.innerText = '- Installs on original game, by DH Animations'
+                } else if (value === 'f') {
+                    image.src = 'schoolboy/future.png'
+                    info.innerText = '- Installs on original game, by DH Animations'
+                } else if (value === 's') {
+                    image.src = 'schoolboy/scary.jfif'
+                    info.innerText = '- Don\'t installs on original game, if you\'re too scared, it\'s not a virus'
+                } else if (value === 'r') {
+                    image.src = 'schoolboy/rofl.jfif'
+                    info.innerText = '- Don\'t installs on original game, by Fruzer'
+                } else if (value === 'm') {
+                    image.src = 'schoolboy/minecraft.jfif'
+                    info.innerText = '- Don\'t installs on original game, by Fruzer'
+                } else if (value === 'l') {
+                    image.src = 'schoolboy/secret.jfif'
+                    info.innerText = '- Don\'t installs on original game, by Fruzer'
+                } else if (value === 'a') {
+                    image.src = 'schoolboy/fake.webp'
+                    info.innerText = '- Don\'t installs on original game, by D one Games'
+                } else if (value === 'e') {
+                    image.src = 'schoolboy/summer.jfif'
+                    info.innerText = '- Installs on original game, by DH Animations'
+                }
+            }
+            function checkmod() {
+                const value = document.getElementById('schoolboymods').options[document.getElementById('schoolboymods').selectedIndex].value
+                if (value === 't') {
+                } else if (value === 'z') {
+                    window.open('https://www.mediafire.com/file/wfvh71hgbjanfqi/%D0%A1%D0%BA%D1%83%D0%BB%D0%B1%D0%BE%D0%B9+%D0%A2%D0%B8%D0%BC%D0%BE%D1%85%D0%B0.apk/file')
+                } else if (value === 'p') {
+                    window.open('https://www.mediafire.com/file/pwjkddqcu9qq3d3/%D0%A1%D0%BA%D1%83%D0%BB%D0%B1%D0%BE%D0%B9+%D0%9F%D0%BE%D0%BB%D0%B8%D1%86%D0%B8%D1%8F(%D0%A2%D1%8E%D1%80%D1%8C%D0%BC%D0%B0)%D0%9C%D0%BE%D0%B4.apk/file')
+                } else if (value === 'i') {
+                    window.open('https://www.mediafire.com/file/myz2jm2d7s1dsfw/%D0%A1%D1%83%D0%BB%D0%B1%D0%BE%D0%B9_%D0%9C%D0%BE%D1%80%D0%BE%D0%B6%D0%BA%D0%B0%D0%9C%D0%BE%D0%B4.apk/file')
+                } else if (value === 'f') {
+                    window.open('https://www.mediafire.com/file/e22mxzhzfadwrr0/%D0%A1%D0%BA%D1%83%D0%BB%D0%B1%D0%BE%D0%B9_%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9_%D0%A1%D0%BA%D1%83%D1%84_%D0%9C%D0%9E%D0%94.apk/file')
+                } else if (value === 's') {
+                    window.open('https://www.mediafire.com/file/jd8s7w5i9w7etb0/schoolboy.apk/file')
+                } else if (value === 'r') {
+                    window.open('https://www.mediafire.com/file/5togaz7qw4cpoyd/SchoolBoy+Rofl+Mode.apk/file')
+                } else if (value === 'm') {
+                    window.open('https://www.mediafire.com/file/a6rertes73f2utt/SchoolBoy+Runaway+Minecraft.apk/file')
+                } else if (value === 'l') {
+                    window.open('https://www.mediafire.com/file/qnogrsmftvbazoi/SchoolBoy+Secret+Location.apk/file')
+                } else if (value === 'a') {
+                    window.open('https://play.google.com/store/apps/details?id=com.GameCat.SchoolboyEscape')
+                } else if (value === 'e') {
+                    window.open('https://www.mediafire.com/file/e0i37m0811frwzf/%D0%A1%D0%BA%D1%83%D0%BB%D0%B1%D0%BE%D0%B9%D0%9A%D0%B0%D1%87%D0%BE%D0%BA%D0%9C%D0%BE%D0%B4.apk/file')
+                }
+            }
+            function schoolboycheats() {
+                document.getElementById("schoolboyrunaway").remove();
+                const schoolboy = document.createElement('div')
+                schoolboy.id = 'schoolboyrunaway'
+                schoolboy.innerHTML = `<br><center><span>Schoolboy Runaway Cheats: </span><button class="x" onclick="removeschoolboy();">X</button><br>
+                <button class="social" onclick="window.open('https://www.mediafire.com/file/xt39pkb6lje9n6p/SchoolBoyRunaway%28CiberMod%29.apk/file')">For Phones + CiberHacker Cheats (Recommended)</button><br>
+                <button class="social" onclick="window.open('https://www.mediafire.com/file/kkjlp5p53uon8sx/SchoolBoy+Runaway+Mode.apk/file')">For Emulators + No Ads</button></center>`
+                document.body.appendChild(schoolboy)
             }
         </script>
     </body>
