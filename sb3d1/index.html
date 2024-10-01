@@ -21,6 +21,10 @@
             html {
                 cursor: url('https://www.cursor.cc/cursor/498/157/cursor.png') 17 13, auto;
             }
+            label {
+                cursor: url('https://www.cursor.cc/cursor/498/157/cursor.png') 17 13, auto;
+                font-size: 20px;
+            }
             .wirusy {
                 background-color: red;
                 color: black;
@@ -95,7 +99,7 @@
             <button onclick="bsod();">BSOD Emulator</button>
             <button onclick="window.open('https://www.youtube.com/playlist?list=PL61a0i9NMQn7LYfacBQ0Q-oWUcJ3J8UhR')">Kolbaser Project Muzy</button>
             <br>
-            <div class="fade"><img src="minecraft.png" width="60px" title="Minecraft Emulator" id="minecraft1" onclick="minecraft()" draggable="false"><img src="windows.png" width="60px" title="Windows Emulator" onclick="emulator()" id="emulator1" draggable="false"><img src="game.png" width="60px" onclick="gry()" title="Gry" draggable="false"><img id="apps" src="apps.png" width="60px" onclick="programy()" title="Programy" draggable="false"><img src="download.png" width="60px" id="download" onclick="apkdownload()" title="Gry dla android z cheatami" draggable="false"><img src="librus.png" width="60px" title="Librus" onclick="librus()" draggable="false"><img src="pfactor.png" width="60px" title="Progressive Factor Releases Images" onclick="pfactor()" draggable="false"><img src="schoolboy.png" width="60xp" title="Schoolboy Runaway" onclick="schoolboy()" draggable="false"></div>
+            <div class="fade"><img src="minecraft.png" width="60px" title="Minecraft Emulator" id="minecraft1" onclick="minecraft()" draggable="false"><img src="windows.png" width="60px" title="Windows Emulator" onclick="emulator()" id="emulator1" draggable="false"><img src="game.png" width="60px" onclick="gry()" title="Gry" draggable="false"><img id="apps" src="apps.png" width="60px" onclick="programy()" title="Programy" draggable="false"><img src="download.png" width="60px" id="download" onclick="apkdownload()" title="Gry dla android z cheatami" draggable="false"><img src="librus.png" width="60px" title="Librus" onclick="librus()" draggable="false"><img src="pfactor.png" width="60px" title="Progressive Factor Releases Images" onclick="pfactor()" draggable="false"><img src="schoolboy.png" width="60px" title="Schoolboy Runaway" onclick="schoolboy()" draggable="false"><img src="https://m.media-amazon.com/images/I/41d3TNh83QL.png" width="60px" title="Kahoot Cheats (Coming Soon)" draggable="false"></div>
             <audio id="aha" src="aha.MP3"></audio>
         </center>
         <script>
@@ -111,7 +115,7 @@
             function socialmedia() {
                 const social = document.createElement('div')
                 social.id = 'socialmedias'
-                social.innerHTML = '<br><center><span>Social Medias: </span><button class="x" onclick="removesocial();">X</button><br><button class="social" onclick="alert(`soundbeat3d1`)">discord</button><br><button class="social" onclick="window.open(`https://www.youtube.com/@soundbeat3d1`, `_blank`)">youtube</button><br><button class="social" onclick="window.open(`https://scratch.mit.edu/users/soundbeat3d1/`, `_blank`)">Scratch</button></center>'
+                social.innerHTML = '<br><center><span>Social Medias: </span><button class="x" onclick="removesocial();">X</button><br><button class="social" onclick="window.open(`https://t.me/soundbeat3d1`)">TELEGRAM</button><br><button class="social" onclick="alert(`soundbeat3d1`)">discord</button><br><button class="social" onclick="window.open(`https://www.youtube.com/@soundbeat3d1`, `_blank`)">youtube</button><br><button class="social" onclick="window.open(`https://scratch.mit.edu/users/soundbeat3d1/`, `_blank`)">Scratch</button></center>'
                 document.body.appendChild(social)
             }
             function removesocial() {
@@ -217,7 +221,7 @@
                         <option value="2">v.1.8.8 - Release</option>
                         <option value="3">v.2 - Fanmade</option>
                     </select>
-                    <button onclick="checkminecraft();">Włącz Minecrafta</button></center>`
+                    <button onclick="checkminecraft();">Włącz Minecrafta</button><br><br><label title="Coming Soon"><input type="checkbox" disabled>Touch Mode</label></center>`
                 document.body.appendChild(minecraft)
             }
             function removeminecraft() {
@@ -360,10 +364,10 @@
                     <button class="social" onclick="window.open('https://scratch.mit.edu/projects/971565130/embed')">Flappy Bird</button>
                     <button class="social" onclick="window.open('https://scratch.mit.edu/projects/971578213/embed')">Geometry Dash</button>
                     <button class="social" onclick="window.open('https://scratch.mit.edu/projects/1017709181/embed')">Brawl Stars Simulator</button>
-                    <button class="social" onclick="window.open('https://scratch.mit.edu/projects/1019171386/embed')">Brawl Stars</button><br><a>Among Us:</a><br>
-                    <button class="social" onclick="window.open('https://g.vseigru.net/7/igra-among-as-prosto-predatel/')">Among Us Remake</button>
-                    <button class="social" onclick="window.open('https://g.vseigru.net/7/igra-among-as-onlajn-versiya/index-en.html')">Among Us Russian Version V1</button>
-                    <button class="social" onclick="window.open('https://g.vseigru.net/7/igra-among-as-na-russkom-odinochnyj-rezhim/en/')">Among Us Russian Version V2</button><br><a>Inne:</a><br>
+                    <button class="social" onclick="window.open('https://scratch.mit.edu/projects/1019171386/embed')">Brawl Stars</button><br><a>Among Us Russian Version:</a><br>
+                    <button class="social" onclick="window.open('https://g.vseigru.net/7/igra-among-as-prosto-predatel/')">Among Us V.1</button>
+                    <button class="social" onclick="window.open('https://g.vseigru.net/7/igra-among-as-onlajn-versiya/')">Among Us V.2</button>
+                    <button class="social" onclick="window.open('https://g.vseigru.net/7/igra-among-as-na-russkom-odinochnyj-rezhim/')">Among Us V.2.1</button><br><a>Inne:</a><br>
                     <button class="social" onclick="window.open('https://playcanv.as/p/2OlkUaxF')">Flappy Bird (Oryginalny)</button>
                     <button class="social" onclick="window.open('https://slowroads.io')">Jazda ulicą (slowroads.io)</button>
                     <button class="social" onclick="window.open('https://ev.io')">Strzelanie (ev.io)</button></center>`
@@ -465,7 +469,9 @@
                 schoolboy.innerHTML = `<br><center><span>Schoolboy Runaway: </span><button class="x" onclick="removeschoolboy();">X</button><br>
                 <button class="social" onclick="schoolboymods()">Mods</button>
                 <button class="social" onclick="schoolboycheats()">Cheats</button><br>
-                <button class="social" disabled="true">Act 2 (Coming Soon)</button></center>`
+                <button class="social" onclick="window.open('https://st.8games.net/10/8g/igra-skulboj-pobeg-ot-bati/')">Schoolboy Run (Subway Surfers)</button><br>
+                <button class="social" onclick="window.open('https://st.8games.net/10/8g/igra-schoolboy-runaway-akt-2/')">Act 2 (Fanmade)</button><br>
+                <button class="social" disabled="true">Act 2 (Coming Soon)<br><img src="schoolboy/act2.jpg" height=200></button></center>`
                 document.body.appendChild(schoolboy)
             }
             function removeschoolboy() {
@@ -484,13 +490,14 @@
                     <option value="p">Prison</option>
                     <option value="i">Ice Cream</option>
                     <option value="f">Future</option>
-                    <option value="s">Scary Mod</option>
+                    <option value="s">schoolboy.exe</option>
                     <option value="r">Rofl Mode</option>
                     <option value="m">Minecraft</option>
                     <option value="l">Secret Location</option>
                     <option value="a">Fake Schoolboy</option>
                     <option value="e">Summer</option>
-                </select><button onclick="checkmod();">Download Mod</button><br>
+                </select><button onclick="checkmod();">Download Mod</button>
+                <button id="playmodonline" onclick="window.open('https://st.8games.net/10/8g/igra-pobeg-pacana-stels-shkolnika/')" hidden>Play Online</button><br>
                 <a>Image:</a><br>
                 <img height="200" src="schoolboy/timo.jfif" id="imagemod"><br>
                 <a>Information:</a><br>
@@ -501,44 +508,57 @@
             function infomod(value) {
                 image = document.getElementById('imagemod')
                 info = document.getElementById('infomod')
+                online = document.getElementById('playmodonline')
                 if (value === 't') {
                     image.src = 'schoolboy/timo.jfif'
                     info.innerText = '- Installs on original game (Need to delete original), by DH Animations'
+                    online.hidden = true
                 } else if (value === 'z') {
                     image.src = 'schoolboy/zombie.jfif'
                     info.innerText = '- Installs on original game, by DH Animations'
+                    online.hidden = true
                 } else if (value === 'p') {
                     image.src = 'schoolboy/prison.png'
-                    info.innerText - '- Installs on original game, by DH Animations'
+                    info.innerText = '- Installs on original game, by DH Animations'
+                    online.hidden = true
                 } else if (value === 'i') {
                     image.src = 'schoolboy/icecream.jfif'
                     info.innerText = '- Installs on original game, by DH Animations'
+                    online.hidden = true
                 } else if (value === 'f') {
                     image.src = 'schoolboy/future.png'
                     info.innerText = '- Installs on original game, by DH Animations'
+                    online.hidden = true
                 } else if (value === 's') {
                     image.src = 'schoolboy/scary.jfif'
                     info.innerText = '- Don\'t installs on original game, if you\'re too scared, it\'s not a virus'
+                    online.hidden = true
                 } else if (value === 'r') {
                     image.src = 'schoolboy/rofl.jfif'
                     info.innerText = '- Don\'t installs on original game, by Fruzer'
+                    online.hidden = true
                 } else if (value === 'm') {
                     image.src = 'schoolboy/minecraft.jfif'
                     info.innerText = '- Don\'t installs on original game, by Fruzer'
+                    online.hidden = true
                 } else if (value === 'l') {
                     image.src = 'schoolboy/secret.jfif'
                     info.innerText = '- Don\'t installs on original game, by Fruzer'
+                    online.hidden = true
                 } else if (value === 'a') {
                     image.src = 'schoolboy/fake.webp'
                     info.innerText = '- Don\'t installs on original game, by D one Games'
+                    online.hidden = false
                 } else if (value === 'e') {
                     image.src = 'schoolboy/summer.jfif'
                     info.innerText = '- Installs on original game, by DH Animations'
+                    online.hidden = true
                 }
             }
             function checkmod() {
                 const value = document.getElementById('schoolboymods').options[document.getElementById('schoolboymods').selectedIndex].value
                 if (value === 't') {
+                    window.open('https://www.mediafire.com/file/wfvh71hgbjanfqi/%25D0%25A1%25D0%25BA%25D1%2583%25D0%25BB%25D0%25B1%25D0%25BE%25D0%25B9_%25D0%25A2%25D0%25B8%25D0%25BC%25D0%25BE%25D1%2585%25D0%25B0.apk/file')
                 } else if (value === 'z') {
                     window.open('https://www.mediafire.com/file/wfvh71hgbjanfqi/%D0%A1%D0%BA%D1%83%D0%BB%D0%B1%D0%BE%D0%B9+%D0%A2%D0%B8%D0%BC%D0%BE%D1%85%D0%B0.apk/file')
                 } else if (value === 'p') {
